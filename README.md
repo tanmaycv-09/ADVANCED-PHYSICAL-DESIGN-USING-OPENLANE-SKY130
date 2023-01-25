@@ -202,6 +202,20 @@ On the second day of the workshop, we started the discussion with the chip floor
 
 <p align="center"><img width="898" alt="Screenshot 2023-01-25 at 8 29 33 PM" src="https://user-images.githubusercontent.com/77117825/214599365-e221170b-3eb4-4e38-8fe6-6ff141fa45c3.png"></p>
 
+# Lec 5: Pin placement and logical cell placement blockage
+
+- Complete Design of the netlist 
+
+<p align="center"><img width="685" alt="Screenshot 2023-01-25 at 8 55 05 PM" src="https://user-images.githubusercontent.com/77117825/214606609-738b3a08-775a-464d-b18c-4d9371ae8f6b.png"></p>
+
+- Pin Placement along with logical cell placement blockage 
+
+<p align="center"><img width="887" alt="Screenshot 2023-01-25 at 9 06 48 PM" src="https://user-images.githubusercontent.com/77117825/214606785-a5e6a00d-0b1c-4307-ad9c-c42504e383df.png"></p>
+
+- Theory behind pin placement
+
+<p align="center"><img src="https://user-images.githubusercontent.com/77117825/214606908-595c1063-8b87-443a-83a3-48569c65096a.jpeg"></p>
+
 
 
 
