@@ -145,6 +145,20 @@ This is the way in which we are going to talk to the computers. This is basicall
 - Buffer ratio = Total no of buffers/Total no of cells
   
   Buffer ratio = 0.1118
+  
+# Day 2: Good floorplan vs bad floorplan and introduction to library cells
+On the second day of the workshop, we started the discussion with the chip floor planning considerations which consisted of the utilization factor, aspect ratio, concept of pre-placed cells, de-coupling capacitors, power planning and pin placement. We also discussed about netlist binding and optimization of placement of the components. Finally, we also had a look on the cell design and characterization flows.
 
+# Part 1: Chip Floor planning considerations
+
+# Lec 1 : Utilization factor and aspect ratio
+
+<img width="1440" alt="Screenshot 2023-01-25 at 6 17 45 PM" src="https://user-images.githubusercontent.com/77117825/214571125-bee8d13f-5335-4ffd-b1a6-c97be654b7cb.png">
+
+<img width="1440" alt="Screenshot 2023-01-25 at 6 19 59 PM" src="https://user-images.githubusercontent.com/77117825/214571205-90a3c6c0-d3a0-49cc-abfe-e12140afb214.png">
+
+<p align="center"><img src="https://user-images.githubusercontent.com/77117825/214571682-efefe826-9cf2-44ca-9660-f5f26e13a06d.jpeg"></p>
+
+# Lec 2: Concept of pre-placed cells
 
 
