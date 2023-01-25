@@ -160,5 +160,13 @@ On the second day of the workshop, we started the discussion with the chip floor
 <p align="center"><img src="https://user-images.githubusercontent.com/77117825/214571682-efefe826-9cf2-44ca-9660-f5f26e13a06d.jpeg"></p>
 
 # Lec 2: Concept of pre-placed cells
+<p align="center"><img width="945" alt="Screenshot 2023-01-25 at 6 51 29 PM" src="https://user-images.githubusercontent.com/77117825/214579535-a1775812-091d-484e-82a3-06614c2df03f.png"></p>
+
+<p align="center"><img width="817" alt="Screenshot 2023-01-25 at 7 15 14 PM" src="https://user-images.githubusercontent.com/77117825/214579569-1ee14d13-7f29-46d4-92e1-25af9abcbbc4.png"></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/77117825/214579644-88be07fc-0b49-4280-a8d4-3d3e1efa367e.jpeg"></p>
+
+
+
 
 
