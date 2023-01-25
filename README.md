@@ -139,7 +139,12 @@ This is the way in which we are going to talk to the computers. This is basicall
 <p align="center"><img width="491" alt="Screenshot 2023-01-25 at 10 05 49 AM" src="https://user-images.githubusercontent.com/77117825/214519092-1621f703-a905-4375-bc45-3ddf1a0b02de.png"></p>
 
 
+- Calculating buffer ratio 
 
+<p align="center"><img width="384" alt="Screenshot 2023-01-25 at 3 36 21 PM" src="https://user-images.githubusercontent.com/77117825/214535566-9a227006-3c65-4604-9026-67b606774f60.png"></p>
+- Buffer ratio = Total no of buffers/Total no of cells
+  
+  Buffer ratio = 0.1118
 
 
 
