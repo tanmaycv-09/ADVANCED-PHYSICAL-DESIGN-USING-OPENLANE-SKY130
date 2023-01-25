@@ -130,6 +130,11 @@ This is the way in which we are going to talk to the computers. This is basicall
 - Exploring the openlane directories
 <img width="1199" alt="Screenshot 2023-01-25 at 10 16 10 AM" src="https://user-images.githubusercontent.com/77117825/214512337-272ab523-c2f6-4237-abe2-39b29b1f0e88.png">
 
+- Calculating Flip flop ratio
+
+<p align="center"><img src="https://user-images.githubusercontent.com/77117825/214519023-1467de2e-0aaa-4257-b7d0-46751eca83e8.jpeg"></p>
+<p align="center"><img width="599" alt="Screenshot 2023-01-25 at 10 05 28 AM" src="https://user-images.githubusercontent.com/77117825/214519070-20321543-8d9b-41aa-b043-40105fbd06f5.png"></p>
+<p align="center"><img width="491" alt="Screenshot 2023-01-25 at 10 05 49 AM" src="https://user-images.githubusercontent.com/77117825/214519092-1621f703-a905-4375-bc45-3ddf1a0b02de.png"></p>
 
 
 
