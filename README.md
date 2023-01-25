@@ -64,7 +64,6 @@ This is the way in which we are going to talk to the computers. This is basicall
 # Lec 4: Introduction to OpenLANE detailed ASIC design flow
 
 
-
 - The flow starts with RTL synthesis so the RTL is fed to "Yosys" with the design constraints.
 - Yosys translates the RTL into a logical circuit using generic components.
 - This circuit can be optimized and then mapped in to cells using "abc".
@@ -110,6 +109,14 @@ This is the way in which we are going to talk to the computers. This is basicall
   - Physical Verification DRC and LVS:
 - Magic is used for Design Rule Checking and spice extraction from layout.
   - Magic and Netgen are used for LVS (extracted spice by magic versus verilog netlist)
+
+# Part 3: Get familiar to open-source EDA tools
+
+- Run docker using the command docker.
+- This should run the docker application in the terminal.
+- Now, we have to run the flow.tcl file in an interactive manner so type the command ./flow.tcl -interactive.
+- The terminal should look as follows:
+
 
 
 
