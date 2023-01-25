@@ -27,6 +27,30 @@ Physical Design or PnR (Place and Route) is the core of any IC design cycle. Fro
 
 <p align="center"><img src="https://user-images.githubusercontent.com/77117825/214495830-43848f13-6644-4096-aa9f-02a930dab062.jpeg"></p>
 
+# Lec 2 : Introduction to RISC-V
+This is the way in which we are going to talk to the computers. This is basically the flow of information from high level language program to the flip-flop level language program (binary language), any high level language is first compiled in its assembly language program this assembly language program is then converted into the machine language program. The bits (0s and 1s) of the machine level program get executed in the layout and we get the required output. The interface that is required between RISC-V architecture and the layout is the "Hardware Description Language".
+<p align="center"><img src="https://user-images.githubusercontent.com/77117825/214499190-933d4ea4-1b42-4892-b6d6-757e1a06bbb0.jpeg"></p>
+
+# Part 2: SoC design and OpenLANE
+# Lec 1: Introduction to all components of open-source digital asic design
+- "ASIC" stands for Application specific integrated circuits.
+- The digital ASIC design elements are:
+  -  RTL IPs (Hardware Description Language and Register Transfer Level models)
+  - EDA Tools
+  - PDK Data
+
+<img width="663" alt="Screenshot 2023-01-24 at 6 44 28 PM" src="https://user-images.githubusercontent.com/77117825/214500708-fd98af28-4fe0-4e2f-b02f-f437ac4ee65b.png">
+
+- PDK is the interface between the FAB and the designers.
+- PDK stands for "Process Design Kit".
+- PDK is a collection of files used to model a fabrication process for the EDA tools used to design an IC.
+
+# Lec 2: Simplified RTL2GDS flow
+<img width="912" alt="Screenshot 2023-01-24 at 6 47 38 PM" src="https://user-images.githubusercontent.com/77117825/214501250-7c22b54d-4a95-44df-85f4-088355f3e2f4.png">
+<p align="center"><img src="https://user-images.githubusercontent.com/77117825/214501627-3c52f564-7640-43cc-a5e5-2ff9fc924b83.jpeg"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/77117825/214501653-87e0da2f-9f91-4697-8d85-1dab0690720d.jpeg"></p>
+
+
 
 
 
