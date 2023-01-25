@@ -166,6 +166,25 @@ On the second day of the workshop, we started the discussion with the chip floor
 
 <p align="center"><img src="https://user-images.githubusercontent.com/77117825/214579644-88be07fc-0b49-4280-a8d4-3d3e1efa367e.jpeg"></p>
 
+# Lec 3: De-coupling capacitors
+
+- Representation of an complex circuit 
+
+<p align="center"><img width="950" alt="Screenshot 2023-01-25 at 7 57 00 PM" src="https://user-images.githubusercontent.com/77117825/214592588-ca6ffc4a-9a49-4e8e-9f54-e30e3b41289d.png"></p>
+
+- Noise Margin diagram 
+
+<p align="center"><img width="888" alt="Screenshot 2023-01-25 at 8 00 07 PM" src="https://user-images.githubusercontent.com/77117825/214592652-dbeea47c-ed16-49fb-8000-05c67dda9d66.png"></p>
+
+- Theory of de-coupling capacitors 
+
+<p align="center"><img src="https://user-images.githubusercontent.com/77117825/214592805-3049692f-856c-4468-8ab3-19829fb5cd0f.jpeg"></p>
+
+- Adding of de-coupling capacitors in the circuit
+
+<img width="927" alt="Screenshot 2023-01-25 at 8 04 10 PM" src="https://user-images.githubusercontent.com/77117825/214592967-8e535289-bfa9-480c-9236-02c73c26ec7d.png">
+
+
 
 
 
