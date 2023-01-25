@@ -62,6 +62,7 @@ This is the way in which we are going to talk to the computers. This is basicall
   - Interactive mode
 
 # Lec 4: Introduction to OpenLANE detailed ASIC design flow
+<img width="896" alt="Screenshot 2023-01-24 at 8 33 45 PM" src="https://user-images.githubusercontent.com/77117825/214511335-4fe028eb-4574-4996-aa4c-487862793f81.png">
 
 
 - The flow starts with RTL synthesis so the RTL is fed to "Yosys" with the design constraints.
@@ -116,6 +117,21 @@ This is the way in which we are going to talk to the computers. This is basicall
 - This should run the docker application in the terminal.
 - Now, we have to run the flow.tcl file in an interactive manner so type the command ./flow.tcl -interactive.
 - The terminal should look as follows:
+<img width="943" alt="Screenshot 2023-01-25 at 9 15 00 AM" src="https://user-images.githubusercontent.com/77117825/214511076-ed193a3d-733e-4b7a-9e2f-a35b3731a91e.png">
+
+- Type the command 
+  - package require openlane 0.9 
+  - prep -design picorv32a
+  - run_synthesis
+
+<img width="1094" alt="Screenshot 2023-01-25 at 9 30 28 AM" src="https://user-images.githubusercontent.com/77117825/214511875-9be4c32b-c807-4710-9d6c-a069d5914b69.png">
+<img width="987" alt="Screenshot 2023-01-25 at 9 58 45 AM" src="https://user-images.githubusercontent.com/77117825/214511919-e63dd616-6b1a-4882-a8b7-3f427bc934c3.png">
+
+- Exploring the openlane directories
+<img width="1199" alt="Screenshot 2023-01-25 at 10 16 10 AM" src="https://user-images.githubusercontent.com/77117825/214512337-272ab523-c2f6-4237-abe2-39b29b1f0e88.png">
+
+
+
 
 
 
