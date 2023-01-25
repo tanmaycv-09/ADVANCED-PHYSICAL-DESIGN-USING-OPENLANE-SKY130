@@ -50,7 +50,66 @@ This is the way in which we are going to talk to the computers. This is basicall
 <p align="center"><img src="https://user-images.githubusercontent.com/77117825/214501627-3c52f564-7640-43cc-a5e5-2ff9fc924b83.jpeg"></p>
 <p align="center"><img src="https://user-images.githubusercontent.com/77117825/214501653-87e0da2f-9f91-4697-8d85-1dab0690720d.jpeg"></p>
 
+#Lec 3: Introduction to OpenLANE and Strive chipsets
+- OpenLANE's Main Goal: Produce a clean GDSII with no human intervention (no-human-in-the-loop).
+- Clean means:
+  - No LVS violations
+  - No DRC violations
+  - No Timing Violations
 
+- It has two modes of operation:
+  - Autonomous mode
+  - Interactive mode
+
+# Lec 4: Introduction to OpenLANE detailed ASIC design flow
+
+
+
+- The flow starts with RTL synthesis so the RTL is fed to "Yosys" with the design constraints.
+- Yosys translates the RTL into a logical circuit using generic components.
+- This circuit can be optimized and then mapped in to cells using "abc".
+- ABC has to be guided during the optimization and this guidance comes in the form of abc synthesis strategies.
+- Synthesis exploration utility is used to generate a report that shows how the design delay and area is affected by the synthesis strategy.
+- Based on this exploration we can choose the best strategy to continue with.
+- Design exploration utility can be used to sweep the design configurations.
+- It generates a report which shows different design matrix and number of violations generated after generating the final layout.
+- OpenLANE Regression Testing:
+  - The design exploration utility is also used for Regression Testing.
+  - We run openLANE on ~70 designs and compare the results to the best known ones.
+- Design for Test (DFT) includes:
+  - Scan Insertion
+  - Automatic Test Pattern Generation (ATPG)
+  - Test Patterns Compaction
+  - Fault Coverage
+  - Fault Simulation
+- Physical Implementation (also called automated PnR (Place and Route)) includes the following:
+  - Floor planning and Power planning
+  - End Decoupling capacitors and Tap Cells insertion
+  - Placement: Global and Detailed
+  - Post placement optimization
+  - Clock Tree Synthesis (CTS)
+  - Routing: Global and Detailed
+- Logical Equivalence Check (LEC):
+  - Everytime the netlist is modified, verification must be performed:
+    - CTS modifies the netlist
+    - Post placement optimization modifies the netlist
+  - LEC is used to formally confirm that the function did not change after modifying the netlist.
+- Dealing with Antenna Rules Violations:
+  - When a metal wire segment is fabricated, it can act as an antenna.
+    - Reactive ion etching causes charge to accumulate on the wire.
+    - Transistor gates can be damaged during fabrications.
+  - Two solutions are possible:
+    - Bridging attaches a higher layer intermediately (requires router awareness).
+    - Add antenna diode cell to leak away charges (antenna diodes are provided by the SCL)
+  - We take a preventive approach:
+    - Add a fake antenna diode next to every cell input after placement.
+    - Run the antenna checker (magic) on the routed layout.
+    - If the checker reports a violation on the cell input pin, replace the fake diode cell by a real one.
+- Static Timing Analysis:
+  - The tool used for STA is OpenSTA.
+  - Physical Verification DRC and LVS:
+- Magic is used for Design Rule Checking and spice extraction from layout.
+  - Magic and Netgen are used for LVS (extracted spice by magic versus verilog netlist)
 
 
 
