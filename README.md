@@ -39,14 +39,14 @@ This is the way in which we are going to talk to the computers. This is basicall
   - EDA Tools
   - PDK Data
 
-<img width="663" alt="Screenshot 2023-01-24 at 6 44 28 PM" src="https://user-images.githubusercontent.com/77117825/214500708-fd98af28-4fe0-4e2f-b02f-f437ac4ee65b.png">
+<p align="center"><img width="663" alt="Screenshot 2023-01-24 at 6 44 28 PM" src="https://user-images.githubusercontent.com/77117825/214500708-fd98af28-4fe0-4e2f-b02f-f437ac4ee65b.png"></p>
 
 - PDK is the interface between the FAB and the designers.
 - PDK stands for "Process Design Kit".
 - PDK is a collection of files used to model a fabrication process for the EDA tools used to design an IC.
 
 # Lec 2: Simplified RTL2GDS flow
-<img width="912" alt="Screenshot 2023-01-24 at 6 47 38 PM" src="https://user-images.githubusercontent.com/77117825/214501250-7c22b54d-4a95-44df-85f4-088355f3e2f4.png">
+<p align="center"><img width="912" alt="Screenshot 2023-01-24 at 6 47 38 PM" src="https://user-images.githubusercontent.com/77117825/214501250-7c22b54d-4a95-44df-85f4-088355f3e2f4.png"></p>
 <p align="center"><img src="https://user-images.githubusercontent.com/77117825/214501627-3c52f564-7640-43cc-a5e5-2ff9fc924b83.jpeg"></p>
 <p align="center"><img src="https://user-images.githubusercontent.com/77117825/214501653-87e0da2f-9f91-4697-8d85-1dab0690720d.jpeg"></p>
 
@@ -62,7 +62,7 @@ This is the way in which we are going to talk to the computers. This is basicall
   - Interactive mode
 
 # Lec 4: Introduction to OpenLANE detailed ASIC design flow
-<img width="896" alt="Screenshot 2023-01-24 at 8 33 45 PM" src="https://user-images.githubusercontent.com/77117825/214511335-4fe028eb-4574-4996-aa4c-487862793f81.png">
+<p align="center"><img width="896" alt="Screenshot 2023-01-24 at 8 33 45 PM" src="https://user-images.githubusercontent.com/77117825/214511335-4fe028eb-4574-4996-aa4c-487862793f81.png"></p>
 
 
 - The flow starts with RTL synthesis so the RTL is fed to "Yosys" with the design constraints.
@@ -117,7 +117,7 @@ This is the way in which we are going to talk to the computers. This is basicall
 - This should run the docker application in the terminal.
 - Now, we have to run the flow.tcl file in an interactive manner so type the command ./flow.tcl -interactive.
 - The terminal should look as follows:
-<img width="943" alt="Screenshot 2023-01-25 at 9 15 00 AM" src="https://user-images.githubusercontent.com/77117825/214511076-ed193a3d-733e-4b7a-9e2f-a35b3731a91e.png">
+<p align="center"><img width="943" alt="Screenshot 2023-01-25 at 9 15 00 AM" src="https://user-images.githubusercontent.com/77117825/214511076-ed193a3d-733e-4b7a-9e2f-a35b3731a91e.png"></p>
 
 - Type the command 
   - package require openlane 0.9 
