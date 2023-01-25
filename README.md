@@ -184,6 +184,28 @@ On the second day of the workshop, we started the discussion with the chip floor
 
 <img width="927" alt="Screenshot 2023-01-25 at 8 04 10 PM" src="https://user-images.githubusercontent.com/77117825/214592967-8e535289-bfa9-480c-9236-02c73c26ec7d.png">
 
+# Lec 4: Power planning
+
+- Single Power rail 
+
+<p align="center"><img width="866" alt="Screenshot 2023-01-25 at 8 26 35 PM" src="https://user-images.githubusercontent.com/77117825/214598940-9fc0f2ff-4ffc-4c6c-b8e0-6fe1a37a4d01.png"></p>
+
+- Power Bus 
+
+<p align="center"><img width="835" alt="Screenshot 2023-01-25 at 8 28 19 PM" src="https://user-images.githubusercontent.com/77117825/214599044-788d31a0-29cd-484e-a418-79647a4465a6.png"></p>
+
+- Theory behind power planning
+
+<p align="center"><img src="https://user-images.githubusercontent.com/77117825/214599181-c3cb316a-8018-4085-87da-7047706033a7.jpeg"></p>
+
+- Final View after placing vertical & horizontal power rails 
+
+<p align="center"><img width="898" alt="Screenshot 2023-01-25 at 8 29 33 PM" src="https://user-images.githubusercontent.com/77117825/214599365-e221170b-3eb4-4e38-8fe6-6ff141fa45c3.png"></p>
+
+
+
+
+
 
 
 
