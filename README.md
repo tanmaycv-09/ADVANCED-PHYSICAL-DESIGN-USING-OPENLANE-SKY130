@@ -338,11 +338,67 @@ On the second day of the workshop, we started the discussion with the chip floor
 
 <p align="center"><img width="1419" alt="Screenshot 2023-01-26 at 12 46 46 PM" src="https://user-images.githubusercontent.com/77117825/214778613-13ac2d35-7f4e-4c8d-bfc1-802bf7390649.png"></p>
 
+# Part 3: Cell design and characterization flows
 
+- Euler's path is the path that is traced only once.
+- Characterization flow includes:
+   - Read the models
+   - Read the extracted SPICE netlist
+   - Recognize the behaviour of the circuit
+   - Read the subcircuits
+   - Attach the necessary power source
+   - Apply the stimulus
+   - Provide necessary output capacitance
+   - Provide necessary simulation command
+ - Feed in all the above steps as a configuration file to the characterization software called "GUNA".
+ - Software will generate timing, noise, power .libs, function
+ - Characterization of .libs:
+   - Timing characterization
+   - Noise characterization
+   - Power characterization
 
+<p align="center"><img width="911" alt="Screenshot 2023-01-26 at 4 08 39 PM" src="https://user-images.githubusercontent.com/77117825/214816470-c349a010-2ade-45e4-853f-44a15343d61e.png"></p>
 
+# Part 4: General timing characterization parameters
 
- 
+- Timing Threshold Definitions:
+  - slew_low_rise_thr:
+    - Defines the point towards the lower set of the rising curve of the output.
+    - Typically 20% of Vdd.
+  - slew_high_rise_thr:
+    - Defines the point towards the higher set of the rising curve of the output.
+    - Typically 80% of Vdd.
+  - slew_low_fall_thr:
+    - Defines the point towards the lower set of the falling curve of the output.
+    - Typically 20% of Vdd.
+  - slew_high_fall_thr:
+    - Defines the point towards the higher set of the falling curve of the output.
+    - Typically 80% of Vdd.
+  - in_rise_thr:
+    - Defines the point towards the centre of the rising curve of the input.
+    - Typically 50%
+  - in_fall_thr:
+    - Defines the point towards the centre of the falling curve of the input.
+    - Typically 50%
+  - out_rise_thr:
+    - Defines the point towards the centre of the rising curve of the output.
+    - Typically 50%
+  - out_fall_thr:
+    - Defines the point towards the centre of the falling curve of the output.
+    - Typically 50%
+- The formula of propogation delay becomes:
+
+<p align="center"><img src="https://user-images.githubusercontent.com/77117825/214826211-fb6ef497-f259-4eb0-ae63-6c31dca70a1c.png"></p>
+
+- If output fall threshold is chosen then input rise threshold must be chosen and if output rise threshold is chosen then input fall threshold must be chosen.
+
+- The delay should always come positive.
+
+- Negative delay is not expected and if negative delay is received then it is due to poor choice of threshold points.
+
+- The formula for Transition time becomes:
+
+<p align="center"><img src="https://user-images.githubusercontent.com/77117825/214826316-a0aa64fc-5bd4-404a-bf9c-a3f611b473e2.png"></p>
 
  
 
