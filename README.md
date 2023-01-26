@@ -257,6 +257,100 @@ On the second day of the workshop, we started the discussion with the chip floor
 
 <p align="center"><img width="1076" alt="Screenshot 2023-01-26 at 10 19 25 AM" src="https://user-images.githubusercontent.com/77117825/214760821-593e3572-23c3-4594-9f43-4a6333c2dc11.png"></p>
 
+# Lec 8: Review floorplan layout in Magic
+
+- General commands to follow in magic to move around the layout are :
+
+<p align="center"><img src="https://user-images.githubusercontent.com/77117825/214763997-49a041e3-fbcc-467e-8639-66b51ca7524f.jpeg"></p>
+
+- to know any specific cell just place the mouse over it press S and then in the tkcon window type "what"
+
+<p align="center"><img width="575" alt="Screenshot 2023-01-26 at 10 38 51 AM" src="https://user-images.githubusercontent.com/77117825/214764146-0ea26a67-7a32-4932-a986-882c88b789ba.png"></p>
+
+# Part 2: Library Binding and Placement
+
+# Lec 1: Netlist binding and initial place design
+
+- definition of Library 
+
+<p align="center"><img src="https://user-images.githubusercontent.com/77117825/214769096-aef1d550-d387-4a7d-a134-a7b733a5a5d2.jpeg".</p>
+ 
+- Placement of the netlist in the floorplan
+ 
+<p align="center"> <img width="971" alt="Screenshot 2023-01-26 at 11 30 17 AM" src="https://user-images.githubusercontent.com/77117825/214769245-d90f6362-d485-4044-b776-ff1d5ae5bf16.png"></p>
+ 
+- For the first two flip-flop lines the placement could be like:
+
+<p align="center"> <img width="968" alt="Screenshot 2023-01-26 at 11 33 45 AM" src="https://user-images.githubusercontent.com/77117825/214769420-cf119ad6-a043-4adb-bd33-fb71f8c4b9ff.png"></p>
+
+# Lec 2: Optimize placement using estimated wire-length and capacitance
+
+- Theory behind optimization :
+
+<p align="center"><img src="https://user-images.githubusercontent.com/77117825/214771437-eda4bc02-d3f4-4fee-b17d-49c3e0b533e4.jpeg"></p>
+
+- Optimized Placement of cells look like :
+
+<p align="center"><img width="972" alt="Screenshot 2023-01-26 at 11 55 48 AM" src="https://user-images.githubusercontent.com/77117825/214771489-fe8d2e28-c7a8-4965-99f1-24bb101b9c41.png"></p>
+
+# Lec 3: Final placement optimization
+
+- Theory behind optimization like such :
+
+<p align="center"><img src="https://user-images.githubusercontent.com/77117825/214773354-c1791cf3-7d32-49b1-81a4-9668d4c98920.jpeg"></p>
+
+- After optimization the overview looks like : 
+
+<p align="center"><img width="970" alt="Screenshot 2023-01-26 at 12 08 45 PM" src="https://user-images.githubusercontent.com/77117825/214774662-efb42248-9a88-41ff-afaa-da2156d953ba.png"></p>
+
+# Lec 4: Need for libraries and characterization
+
+- Typical IC design flow:
+
+<p align="center"><img src="https://user-images.githubusercontent.com/77117825/214774795-ee8cc87b-3404-4a24-b718-6860a1032c07.jpeg"></p>
+
+- Logic Synthesis: Arrangement of gates that will represent the original signal functionality described by the RTL.
+- Floor Planning: We import the output of the logic synthesis and decide the size of core and die.
+- Placement: We take the particular logic cells present in the netlist and place it on the chip in such a fashion that initial timing is met.
+- Clock Tree Synthesis: The clock is being spread across the logic cells at an equal time.
+- Clock buffers will take care that the signal has equal rise and fall time.
+
+# Lec 5: Congestion aware placement using RePlAce 
+
+- Global Placement is coarse placement and no legalization is happening.
+- Standard cells are placed in standard cell rows and they should be placed exactly in the rows.
+- Now, after running the floor plan, execute the command run_placement
+
+- First the global placement will occur.
+- Main objective of the global placement is to reduce the wire length.
+- In openLANE, the concept of HPWL (Half Parameter Wire Length) is used.
+- Now, to observe the placement, go to the placement directory using the "cd" command.
+- Use the command ls -ltr to check what files are present in the directory.
+- Now type the following command in terminal: magic -T 
+
+<p align="center"><img width="906" alt="Screenshot 2023-01-26 at 12 41 41 PM" src="https://user-images.githubusercontent.com/77117825/214778479-6df6c26a-639d-41f0-acce-8a5273b1f3a2.png"></p>
+
+- This should open the magic terminal that looks like:
+
+<p align="center"><img width="673" alt="Screenshot 2023-01-26 at 12 43 22 PM" src="https://user-images.githubusercontent.com/77117825/214779066-2dff1304-a478-4d2f-abb9-b823c0e2b58c.png"></p>
+
+- Zoom in the layout :
+
+<p align="center"><img width="1419" alt="Screenshot 2023-01-26 at 12 46 46 PM" src="https://user-images.githubusercontent.com/77117825/214778613-13ac2d35-7f4e-4c8d-bfc1-802bf7390649.png"></p>
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
 
 
 
