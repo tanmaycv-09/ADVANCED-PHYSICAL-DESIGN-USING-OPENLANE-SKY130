@@ -216,6 +216,80 @@ On the second day of the workshop, we started the discussion with the chip floor
 
 <p align="center"><img src="https://user-images.githubusercontent.com/77117825/214606908-595c1063-8b87-443a-83a3-48569c65096a.jpeg"></p>
 
+# Lec 6: Steps to run floorplan using OpenLANE
+
+- After successfully running the synthesis we need to run the floorplan, for that the command is:
+
+<p align="center"><img width="229" alt="Screenshot 2023-01-26 at 9 31 04 AM" src="https://user-images.githubusercontent.com/77117825/214756483-d2312d67-1ff0-4259-9d80-3539fde6aa97.png"></p>
+
+- To check the floorplanning information, go to the "configuration" folder in openlane using the "cd" command and type the command less README.md in the terminal.
+
+<p align="center"><img width="935" alt="Screenshot 2023-01-26 at 9 22 50 AM" src="https://user-images.githubusercontent.com/77117825/214756598-6620e033-812e-44eb-b0db-b47a0a33c873.png"></p>
+
+- After running floorplan 
+
+<p align="center"><img width="1096" alt="Screenshot 2023-01-26 at 9 33 18 AM" src="https://user-images.githubusercontent.com/77117825/214756665-7a36bce6-c58b-4387-bc55-cb5e3e2ce851.png"></p>
+
+# Lec 7: Review floorplan files and steps to view floorplan
+
+- To review the file created from running the floorplan command, go to the runs directory using the "cd" command and go further into the floorplan directory.
+- Use ls -ltr command to check available files.
+- After successfully running the floorplan we will check the changes in the run file 
+
+<p align="center"><img width="722" alt="Screenshot 2023-01-26 at 9 49 58 AM" src="https://user-images.githubusercontent.com/77117825/214760067-550d71d1-52b3-4985-a717-3b264b7fbec4.png"></p>
+
+- Now go to the "results/floorplan" directory and use the command ls -ltr to check the contents of this directory.
+- Open the file "picorv32a.floorplan.def" using the "less" command.
+- When opened the file looks as follow:
+
+<p align="center"><img width="599" alt="Screenshot 2023-01-26 at 9 54 23 AM" src="https://user-images.githubusercontent.com/77117825/214760231-04258911-4eaa-4631-a2d9-df7aa2adcca2.png"></p>
+
+- The DIEAREA ( 0 0 ) ( 660685 671405 ) ; gives us the co-ordinates of the left bottom corner and right top corner of the chip.
+- The UNITS DISTANCE MICRONS 1000 ; says that one micron equals thousand database units.
+- Exit it by pressing "Q" button on the keyboard.
+- Open the "merged.lef" file in magic using the command magic -T 
+
+<p align="center"><img width="906" alt="Screenshot 2023-01-26 at 10 07 32 AM" src="https://user-images.githubusercontent.com/77117825/214760479-0258d62c-6de7-4b19-bc63-680a5210fb5b.png"></P>
+
+- When the magic terminal opens it looks as follows:
+
+<p align="center"><img width="984" alt="Screenshot 2023-01-26 at 10 19 07 AM" src="https://user-images.githubusercontent.com/77117825/214760809-19892a34-0d8a-4d4c-9b02-684f7c090d20.png"></p>
+
+<p align="center"><img width="1076" alt="Screenshot 2023-01-26 at 10 19 25 AM" src="https://user-images.githubusercontent.com/77117825/214760821-593e3572-23c3-4594-9f43-4a6333c2dc11.png"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
