@@ -400,26 +400,179 @@ On the second day of the workshop, we started the discussion with the chip floor
 
 <p align="center"><img src="https://user-images.githubusercontent.com/77117825/214826316-a0aa64fc-5bd4-404a-bf9c-a3f611b473e2.png"></p>
 
+# Day 3: Design library cell using Magic Layout and ngspice characterization
+
+# Lec 0: IO placer revision
+
+- First, we will look at the input-output placer.
+- In OpenLANE follow the steps upto floorplan as discussed earlier.
+- If we run the magic file command, then we had got the output file with equidistand input-output pins as follow:
+
+<p align="center"><img width="1440" alt="Screenshot 2023-01-27 at 8 31 57 AM" src="https://user-images.githubusercontent.com/77117825/215003533-c8ce0237-0025-48a0-8216-d3568daf81f7.png"></p>
+
+- To change the configurations of the pin change it in floorplan.tcl file
+
+<p align="center"><img width="737" alt="Screenshot 2023-01-27 at 8 38 10 AM" src="https://user-images.githubusercontent.com/77117825/215003596-4f645a18-5c5b-4d23-af9a-0bbda26fbe35.png"></p>
+
+- Now i am copying the env(FP_io_mode)
+
+<p align="center"><img width="1046" alt="Screenshot 2023-01-27 at 8 39 56 AM" src="https://user-images.githubusercontent.com/77117825/215003710-7d37e06a-16b7-4dab-989c-b671bb97e8ce.png"></p>
+
+- Setting the mode to 2:
+
+<p align="center"><img width="743" alt="Screenshot 2023-01-27 at 8 42 01 AM" src="https://user-images.githubusercontent.com/77117825/215003748-8ca018db-277a-43d3-a4ad-4aaf4e84d80a.png"></p>
+
+- Resultant changes can be seen :
+- The pins are more closer now :
+
+<p align="center"><img width="1440" alt="Screenshot 2023-01-27 at 8 48 25 AM" src="https://user-images.githubusercontent.com/77117825/215003777-c6ae2afc-d6f0-4028-8d97-d2e66ffba45e.png"></p>
+
+<p align="center"><img width="1432" alt="Screenshot 2023-01-27 at 9 00 11 AM" src="https://user-images.githubusercontent.com/77117825/215003983-cea00f94-d007-49dd-993a-5ab20fc26767.png"></p>
+
+# Lec 1: SPICE deck creation for CMOS inverter
+
+- To create a SPICE deck for a CMOS inverter we must complete the following steps:
+   - Define component connectivity
+   - Declare component values
+   - Identify nodes
+   - Name nodes
+- Nodes are those two points in between which there is a component.
+- We create the following netlist:
+
+<p align="center"><img width="970" alt="Screenshot 2023-01-27 at 9 11 45 AM" src="https://user-images.githubusercontent.com/77117825/215005947-b4965275-f12d-4155-b9be-f630893d92e4.png"></p>
+
+# Lec 2: SPICE simulation lab for CMOS inverter
+
+- The netlist has the following code:
+   
+        - ***MODEL Descriptions***
+        - ***NETLIST Description***
+        - M1 out in vdd vdd pmos w=0.375u l=0.25u
+        - M2 out in 0 0 nmos w=0.375u l=0.25u
+        - cload out 0 10f
+        - Vdd vdd 0 2.5
+        - Vin in 0 2.5
+        - ***SIMULATION Commands***
+        - .op
+        - .dc Vin 0 2.5 2.5
+        - ***.include tsmc_025um_model.mod***
+        - .LIB "tsmc_025um_model.mod" CMOS_MODELS
+        - .end
+
+- Increasing the PMOS width shift the dc transfer characteristics plot to the right.
+
+# Lec 3-4: Switching Threshold Vm
+
+- Switching threshold is the point at which the device switches.
+- It is the point where Vin = Vout
+- Graphical method to find Vm is to draw a line across the graph of output voltage to input voltage of a CMOS inverter starting at the origin and ending at the opposite diagonal of the plot (basically a line with a 45 degree inclination with the x-axis). Now, the x-coordinate of the point of intersection of this line and the curve is the switching threshold.
+- At Vm, both PMOS and NMOS are turned 'ON' because Vgs has almost crossed the threshold region for both of them.
+- IdsP = - IdsN which means that IdsP + IdsN = 0
+
+# Lec 5 : Lab steps to git clone vsdstdcelldesign
+
+- Git clone vsdstdcelldesign repo 
+
+<p align="center"><img width="735" alt="Screenshot 2023-01-27 at 10 29 14 AM" src="https://user-images.githubusercontent.com/77117825/215014768-fb6eb51d-5183-43b6-9b7a-ed41b97e74c3.png"></p>
+
+- ls -ltr vsdstdcelldesign
+
+<p align="center"><img width="726" alt="Screenshot 2023-01-27 at 10 31 05 AM" src="https://user-images.githubusercontent.com/77117825/215014861-38e82bd8-1c22-4fe3-9947-9d3d734badf6.png"></p>
+
+- Copy sky130.tech file in vsdstdcelldesign
+
+<p align="center"><img width="1370" alt="Screenshot 2023-01-27 at 10 41 41 AM" src="https://user-images.githubusercontent.com/77117825/215014976-ccafd645-f254-431c-964f-77377937c3dc.png"></p>
+
+- After copying run the magic command
+
+<p align="center"><img width="728" alt="Screenshot 2023-01-27 at 10 45 02 AM" src="https://user-images.githubusercontent.com/77117825/215015025-97e1e1f8-b879-41b3-aed8-efd458f9f316.png"></p>
+
+- magic opens up and the inverter layout is printed
+
+<p align="center"><img width="1341" alt="Screenshot 2023-01-27 at 10 45 28 AM" src="https://user-images.githubusercontent.com/77117825/215015083-3322467a-11f2-4b0e-a9c4-8b733a96705d.png"></p>
+
+# Part 2: Inception of Layout and CMOS fabrication process
+
+- There is a 16 mask CMOS process which includes:
+   - Selecting a substrate
+   - Creating active region for transistors
+   - N-well and P-well formation
+   - Formation of Gate
+   - Lightly doped drain (LDD) formation
+   - Source and drain formation
+   - Steps to form contacts and local interconnects
+   - Higher level metal formation
+- In a magic layout, to check if there are connections between two parts of the circuit, press "S" button on keyboard 3 times.
+- LEF is library exchanged format.
+- Functionality of LEF is protecting the IP.
+
+- Using S to identify parts of the layout:
+
+<p align="center"><img width="1436" alt="Screenshot 2023-01-27 at 12 24 38 PM" src="https://user-images.githubusercontent.com/77117825/215028792-ab6674c9-7b2b-4e65-9f1b-4473ed0da5fa.png"></p>
+
+<p align="center"><img width="1419" alt="Screenshot 2023-01-27 at 12 25 25 PM" src="https://user-images.githubusercontent.com/77117825/215028793-daaf62db-c05f-49a0-935c-fdc980f739ee.png"></p>
+
+- extracting into spice 
+
+<p align="center"><img width="723" alt="Screenshot 2023-01-27 at 12 53 19 PM" src="https://user-images.githubusercontent.com/77117825/215032163-dc798d46-ecd1-46f7-b109-a08d725cd9fa.png"></p>
+
+- Changes can be seen in vsdstdcelldesign file 
+
+<p align="center"><img width="730" alt="Screenshot 2023-01-27 at 12 57 26 PM" src="https://user-images.githubusercontent.com/77117825/215032369-3f751833-8ecc-447d-904a-af0fd0ed974f.png"></p>
+
+<p align="center"><img width="673" alt="Screenshot 2023-01-27 at 12 57 45 PM" src="https://user-images.githubusercontent.com/77117825/215032449-f51e9f91-1536-4f65-b044-ce07c1993ecd.png"></p>
+
+<p align="center"><img width="726" alt="Screenshot 2023-01-27 at 12 59 09 PM" src="https://user-images.githubusercontent.com/77117825/215032461-76e36145-6865-438f-902e-f6ce520305dd.png"></p>
+
+- looking in the spice netlist 
+
+<p align="center"><img width="734" alt="Screenshot 2023-01-27 at 12 59 56 PM" src="https://user-images.githubusercontent.com/77117825/215032467-e706c6f8-cbbb-472d-aede-5ed53d948e8f.png"></p>
+
+# Part 3: Sky130 Tech File Labs
+
+# Lec 1 :Lab steps to create final SPICE deck using Sky130 tech
+
+- Look into the sky130_inv.spice using vim command;
+
+<p align="center"><img width="726" alt="Screenshot 2023-01-27 at 12 59 09 PM" src="https://user-images.githubusercontent.com/77117825/215103452-a87d6584-8ba3-433d-9efd-ab606af434f9.png"></p>
+
+<p align="center"><img width="734" alt="Screenshot 2023-01-27 at 12 59 56 PM" src="https://user-images.githubusercontent.com/77117825/215103518-5f74a22e-30d2-46ea-9ece-807d365a80d4.png"></p>
+
+- Update the file 
+
+<p align="center"><img width="851" alt="Screenshot 2023-01-27 at 7 27 50 PM" src="https://user-images.githubusercontent.com/77117825/215104384-c87d18ff-52be-4bbd-8d2d-a585aad6f540.png"></p>
+
+- Use ngspice command to look into spice simulations 
+
+<p align="center"><img width="745" alt="Screenshot 2023-01-27 at 6 42 11 PM" src="https://user-images.githubusercontent.com/77117825/215104517-82ae23bb-6125-48cb-8cd3-96f8f3226855.png"></p>
+
+
+<p align="center"><img width="347" alt="Screenshot 2023-01-27 at 6 43 12 PM" src="https://user-images.githubusercontent.com/77117825/215104530-e13e33f2-9c50-43a3-9a1f-22449046eaa3.png"></p>
+
+
+
+<p align="center"><img width="1405" alt="Screenshot 2023-01-27 at 6 46 14 PM" src="https://user-images.githubusercontent.com/77117825/215104547-c2e18af1-ce35-482c-b6f5-a2789c397dfe.png"></p>
+- After adjusting capacitor values spikes in the simulation can be made less and now the waveforms after adjustment can be seen as:
+
+<p align="center"><img width="1357" alt="Screenshot 2023-01-27 at 7 40 45 PM" src="https://user-images.githubusercontent.com/77117825/215107280-0ea5ac1a-395c-4e80-b143-86debea8c177.png"></p>
+
+# Lec 2:Lab steps to characterize inverter using sky130 model files
+
+- Theory behind characterization of a cell 
+
+<p align="center"><img src="https://user-images.githubusercontent.com/77117825/215109059-3703acf0-6a2f-42c2-a718-f839b57972cf.jpeg"</p>
  
+ - Rise time Calculations :
 
+<p align="center"><img width="797" alt="Screenshot 2023-01-27 at 7 56 07 PM" src="https://user-images.githubusercontent.com/77117825/215111811-873ac4a3-a00f-4b6f-a636-37b9f0be8486.png"></p>
 
+<p align="center"><img width="1326" alt="Screenshot 2023-01-27 at 8 04 21 PM" src="https://user-images.githubusercontent.com/77117825/215111920-3aec44e6-d6aa-4a59-9028-c1190e64f114.png"></p>
 
+- Time values at 0.66V and 2.64V (i.e. 20% & 80% of 3.3V)
 
+<p align="center"><img width="293" alt="Screenshot 2023-01-27 at 7 58 59 PM" src="https://user-images.githubusercontent.com/77117825/215112222-fe26fb7c-4c6a-4f8d-b158-37d77ab7cd14.png"></p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p align="center"><img width="267" alt="Screenshot 2023-01-27 at 8 01 35 PM" src="https://user-images.githubusercontent.com/77117825/215112235-e5a879d8-c366-42a2-8cf7-eb1c129cd403.png"></p>
 
 
 
