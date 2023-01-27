@@ -574,18 +574,37 @@ On the second day of the workshop, we started the discussion with the chip floor
 
 <p align="center"><img width="267" alt="Screenshot 2023-01-27 at 8 01 35 PM" src="https://user-images.githubusercontent.com/77117825/215112235-e5a879d8-c366-42a2-8cf7-eb1c129cd403.png"></p>
 
+         2.2462 - 2.1824 = 0.0638ns
+
+- Fall Time Calculations 
+
+<p align="center"><img width="1270" alt="Screenshot 2023-01-27 at 8 13 48 PM" src="https://user-images.githubusercontent.com/77117825/215114817-91272ebc-fb6d-4858-a0a3-b5e64dde14a3.png"></p>
 
 
+<p align="center"><img width="399" alt="Screenshot 2023-01-27 at 8 15 20 PM" src="https://user-images.githubusercontent.com/77117825/215114823-fe946d19-4bae-451c-b5df-854f08b1e4ca.png"></p>
+
+<p align="center"><img width="296" alt="Screenshot 2023-01-27 at 8 15 46 PM" src="https://user-images.githubusercontent.com/77117825/215114824-832b47e0-fb8b-494b-b877-ee86e8311aa1.png"></p>
+      
+         4.0953 - 4.05291 = 0.04239ns
+
+- Rise Cell Delay ( Propogation Rise Delay)
 
 
+<p align="center"><img width="390" alt="Screenshot 2023-01-27 at 8 20 37 PM" src="https://user-images.githubusercontent.com/77117825/215116650-b65e0bb6-cc99-4d0f-b79b-427dae6b1ff0.png"></p>
 
 
+<p align="center"><img width="295" alt="Screenshot 2023-01-27 at 8 21 17 PM" src="https://user-images.githubusercontent.com/77117825/215116651-e086de99-c9c2-487a-afd2-5e26d0102ebd.png"></p>
+
+        2.21 - 2.15 = 0.06ns
+        
+- Fall Cell Delay ( Propogation Fall Delay)
 
 
+<p align="center"><img width="396" alt="Screenshot 2023-01-27 at 8 24 39 PM" src="https://user-images.githubusercontent.com/77117825/215116959-5d87a5cd-b46e-4a18-a90a-22694dd493a2.png"></p>
 
+<p align="center"><img width="313" alt="Screenshot 2023-01-27 at 8 24 26 PM" src="https://user-images.githubusercontent.com/77117825/215116974-35d65b40-970c-419b-8511-d86fe240f16d.png"></p>
 
-
-
+            4.07 - 4.05 = 0.02ns
 
 
 
