@@ -705,6 +705,37 @@ On the second day of the workshop, we started the discussion with the chip floor
 
 <p align="center"><img width="961" alt="Screenshot 2023-01-28 at 1 01 46 PM" src="https://user-images.githubusercontent.com/77117825/215253458-e559bf8b-3387-4c69-b1ac-3ba074a25038.png"></p>
 
+# Lab :  Lab steps to configure synthesis settings to fix slack and include vsdinv
+
+- if you run_floorplan you will face this error
+
+<p align="center"><img width="731" alt="Screenshot 2023-01-28 at 7 50 35 PM" src="https://user-images.githubusercontent.com/77117825/215279884-3e5aad70-5a35-438e-9ceb-6854872d39cb.png"></p>
+
+<p align="center"><img width="730" alt="Screenshot 2023-01-28 at 7 51 22 PM" src="https://user-images.githubusercontent.com/77117825/215279966-911b02b9-6a98-4ec5-8e4a-c52baa38f770.png"></p>
+
+- Follow these steps 
+
+         init_floorplan
+         place_io
+         global_placement_or
+         detailed_placement
+         tap_decap_or
+         detailed_placement
+         gen_pdn
+         
+<p align="center"><img width="723" alt="Screenshot 2023-01-28 at 10 24 32 PM" src="https://user-images.githubusercontent.com/77117825/215280121-69fdfdd4-9df6-47d2-8158-dcd9178302c5.png"></p>
+
+- Magic opens up 
+
+<p align="center"><img width="1435" alt="Screenshot 2023-01-28 at 9 26 28 PM" src="https://user-images.githubusercontent.com/77117825/215280200-576bd8c4-7c35-4128-9f81-e49102b12a94.png"></p>
+
+<p align="center"><img width="1282" alt="Screenshot 2023-01-28 at 9 32 33 PM" src="https://user-images.githubusercontent.com/77117825/215281771-5e72ff50-a4f2-446a-b7b6-ca2e86cf7b8f.png"></p>
+
+<p align="center"><img width="1419" alt="Screenshot 2023-01-28 at 10 12 49 PM" src="https://user-images.githubusercontent.com/77117825/215282150-705cc597-2392-4dd3-b63c-107306ccde61.png"></p>
+
+<p align="center"><img width="685" alt="Screenshot 2023-01-28 at 10 15 13 PM" src="https://user-images.githubusercontent.com/77117825/215281935-437260b3-c59f-4eb5-b71b-23b47888c576.png"></p>
+
+![Uploading Screenshot 2023-01-28 at 10.16.10 PM.png…]()
 
 
 
