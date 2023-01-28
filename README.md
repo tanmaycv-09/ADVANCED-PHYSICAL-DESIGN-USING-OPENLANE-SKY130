@@ -737,6 +737,10 @@ On the second day of the workshop, we started the discussion with the chip floor
 
 
 
+# part 2 : Timing analysis with ideal clocks using openSTA
+
+# Lec 1 :  Setup timing analysis and introduction to flip-flop setup time
+
 
 
 
