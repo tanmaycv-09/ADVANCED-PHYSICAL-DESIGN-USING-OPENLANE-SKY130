@@ -741,6 +741,9 @@ On the second day of the workshop, we started the discussion with the chip floor
 
 # Lec 1 :  Setup timing analysis and introduction to flip-flop setup time
 
+<p align="center"><img width="970" alt="Screenshot 2023-01-28 at 4 21 13 PM" src="https://user-images.githubusercontent.com/77117825/215285001-6f05215a-67ee-40b9-918a-6e147ed39724.png"></p>
+
+
 
 
 
