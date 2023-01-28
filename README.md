@@ -605,10 +605,64 @@ On the second day of the workshop, we started the discussion with the chip floor
 <p align="center"><img width="313" alt="Screenshot 2023-01-27 at 8 24 26 PM" src="https://user-images.githubusercontent.com/77117825/215116974-35d65b40-970c-419b-8511-d86fe240f16d.png"></p>
 
             4.07 - 4.05 = 0.02ns
+ 
+ 
+ # Lec 3-9 : Eplanation and a walk around the magic tool:
+ 
+            http://opencircuitdesign.com/magic/
+            
+- Everything related to magic can be learnt from this site, It also has DRC rules which are very helpful to get a clear hands on the reasons behind those DRC errors.
+
+- Some basic commands, more can be explored on the site 
+
+<p align="center"><img width="1165" alt="Screenshot 2023-01-28 at 8 25 01 AM" src="https://user-images.githubusercontent.com/77117825/215238589-c89fa628-58fa-402d-a4ec-5573774c5f12.png"></p>
+
+<p align="center"><img width="1060" alt="Screenshot 2023-01-28 at 8 26 06 AM" src="https://user-images.githubusercontent.com/77117825/215238591-2d0199b5-cf92-4885-9da0-5cec0c8b49bf.png"></p>
+
+# Day 4 : Pre-layout timing analysis and importance of good clock tree
+
+# Lec 1 :  Lab steps to convert grid info to track info
+
+- Opening the .mag file 
+<p align="center"><img width="875" alt="Screenshot 2023-01-28 at 8 46 40 AM" src="https://user-images.githubusercontent.com/77117825/215239557-4fbf9c7a-e5af-4da1-bc48-800727e457e7.png"></p>
+<p align="center"><img width="1091" alt="Screenshot 2023-01-28 at 8 51 24 AM" src="https://user-images.githubusercontent.com/77117825/215239567-519de6e8-6500-4924-b908-8eade0eb985f.png"></p>
+
+- Now our objective is to extract a lef file out of this .mag file and then see if that .lef file can be plugged into the picorv32a flow 
+          - Guidelines 
+          - i/p & o/p port must lie on the intersection of vertical & horizontal lines 
+          - width of the std cell must be in the odd multiples of the track pitch & height should be in the odd multiple of vertical track pitch 
+          
+- opening the track file 
+<p align="center"><img width="902" alt="Screenshot 2023-01-28 at 9 00 11 AM" src="https://user-images.githubusercontent.com/77117825/215239947-df89b3f7-bc5d-41a1-9dc4-ff08ad17a849.png"></p>
+<p align="center"><img width="217" alt="Screenshot 2023-01-28 at 9 00 33 AM" src="https://user-images.githubusercontent.com/77117825/215239952-81dea828-f40f-4cd1-9d0e-c4968c1e75f5.png"></p>
+
+              PnR is an automated flow, tracks is to specify where all you want your routes to go 
+
+- Now the step is to check if the tracks are placed correctly by using this command & then checking the layout window
+
+<p align="center"><img width="614" alt="Screenshot 2023-01-28 at 9 08 33 AM" src="https://user-images.githubusercontent.com/77117825/215240630-ed9b225b-5eb1-410c-b884-8edddd69fd01.png"></p>
+
+<p align="center"><img width="361" alt="Screenshot 2023-01-28 at 9 12 05 AM" src="https://user-images.githubusercontent.com/77117825/215240634-c05cc72d-73fa-4be3-8e37-5dd2ccb59c0d.png"></p>
 
 
+<p align="center"><img width="478" alt="Screenshot 2023-01-28 at 9 13 05 AM" src="https://user-images.githubusercontent.com/77117825/215240639-9a996a2c-b11e-4444-84e9-84cccb384526.png"></p>
 
+# Lec 2: Lab steps to convert magic layout to std cell LEF
+- width of std cell must be in the odd multiples of x-pitch 
 
+- Creating .lef file 
+
+<img width="871" alt="Screenshot 2023-01-28 at 9 29 24 AM" src="https://user-images.githubusercontent.com/77117825/215241432-33a01447-6039-4e06-a459-ea9e1c01acb3.png">
+
+<p align="center"><img width="858" alt="Screenshot 2023-01-28 at 9 30 44 AM" src="https://user-images.githubusercontent.com/77117825/215241100-85dd1794-aa18-4486-b138-0ecaae27b576.png"></p>
+
+<p align="center"><img width="528" alt="Screenshot 2023-01-28 at 9 32 27 AM" src="https://user-images.githubusercontent.com/77117825/215241400-ff52e967-828d-4b19-a696-554920f84665.png"></p>
+
+<p align="center"><img width="748" alt="Screenshot 2023-01-28 at 9 34 35 AM" src="https://user-images.githubusercontent.com/77117825/215241144-b2231870-bc3b-40dd-a760-1c8ef1ec3197.png"></p>
+
+                So our .lef file is ready now next step is to plug this .lef file into picorv32a flow
+                
+                
 
 
 
