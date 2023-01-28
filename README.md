@@ -662,11 +662,48 @@ On the second day of the workshop, we started the discussion with the chip floor
 
                 So our .lef file is ready now next step is to plug this .lef file into picorv32a flow
                 
-                
 
+# Lec 3 : Introduction to timing libs and steps to include new cell in synthesis
 
+- Copying the .lef file into openlane/designs/picorv32a/src
 
+<p align="center"><img width="859" alt="Screenshot 2023-01-28 at 9 54 26 AM" src="https://user-images.githubusercontent.com/77117825/215241923-b965f625-d967-42b5-88c1-5ecb128f0cf3.png"></p>
 
+<p align="center"><img width="910" alt="Screenshot 2023-01-28 at 9 55 35 AM" src="https://user-images.githubusercontent.com/77117825/215241924-847d2b8f-6184-4e4a-99ee-6f56e3e946d2.png"></p>
+
+<p align="center"><img width="898" alt="Screenshot 2023-01-28 at 10 13 44 AM" src="https://user-images.githubusercontent.com/77117825/215251474-f91a1fa1-ed14-4b84-9058-1f0170a206fb.png"></p>
+
+- Updating the config.tcl file 
+
+<p align="center"><img width="874" alt="Screenshot 2023-01-28 at 12 19 31 PM" src="https://user-images.githubusercontent.com/77117825/215251604-019be74a-b64c-49ad-9baf-76f3aca14b2c.png"></p>
+
+- Now in new terminal again run docker through openlane and run these steps 
+               
+               docker 
+               ./flow.tcl -interactive
+               package require openlane 0.9 
+               prep -design picorv32a -tag "current file" -overwrite 
+               run_synthesis
+               
+               set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+  
+               add_lefs -src $lefs
+               
+               
+               
+<p align="center"><img width="722" alt="Screenshot 2023-01-28 at 12 05 52 PM" src="https://user-images.githubusercontent.com/77117825/215251484-22b62e9a-840c-4993-ac2a-9b2d9bb1da3d.png"></p>
+
+<p align="center"><img width="721" alt="Screenshot 2023-01-28 at 12 16 09 PM" src="https://user-images.githubusercontent.com/77117825/215251485-325931ca-1835-4c18-b561-bfe635423ac3.png"></p>
+
+<p align="center"><img width="736" alt="Screenshot 2023-01-28 at 12 11 07 PM" src="https://user-images.githubusercontent.com/77117825/215251488-2be6b5f0-38b2-4762-8faf-e3917c93807d.png"></p>
+
+# Lec 4: Introduction to delay tables
+
+- Theory :
+
+<p align="center"><img src="https://user-images.githubusercontent.com/77117825/215253457-77805649-3deb-429f-ace2-7447afd38947.jpeg"></p>
+
+<p align="center"><img width="961" alt="Screenshot 2023-01-28 at 1 01 46 PM" src="https://user-images.githubusercontent.com/77117825/215253458-e559bf8b-3387-4c69-b1ac-3ba074a25038.png"></p>
 
 
 
