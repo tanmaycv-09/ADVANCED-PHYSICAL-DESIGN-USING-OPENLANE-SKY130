@@ -735,7 +735,7 @@ On the second day of the workshop, we started the discussion with the chip floor
 
 <p align="center"><img width="685" alt="Screenshot 2023-01-28 at 10 15 13 PM" src="https://user-images.githubusercontent.com/77117825/215281935-437260b3-c59f-4eb5-b71b-23b47888c576.png"></p>
 
-![Uploading Screenshot 2023-01-28 at 10.16.10 PM.png…]()
+
 
 
 
