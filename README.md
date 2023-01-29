@@ -882,7 +882,29 @@ On the second day of the workshop, we started the discussion with the chip floor
             
 - After run_placement we noticed the area has increased and this is because of increasing buffer areas for reducing slack             
               
-              
+- now run_cts 
+
+            run_cts
+- this will create picorv32a.synthesis.cts.v file inside 
+       
+                /home/tanmaycv09/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/26-01_16-45/results/synthesis
+                       
+- post run_cts check these values
+
+            
+<p align="center"><img width="707" alt="Screenshot 2023-01-29 at 1 48 58 PM" src="https://user-images.githubusercontent.com/77117825/215314240-031e783b-75e5-4618-aaba-5692f008e480.png"></p>
+
+# Part 4: Timing analysis with real clocks using openSTA
+
+# Lec 1 : Setup timing analysis using real clocks
+- Setup Time Defn :
+
+<img width="987" alt="Screenshot 2023-01-29 at 1 58 29 PM" src="https://user-images.githubusercontent.com/77117825/215315803-79f0fa6c-f3ec-46ec-95fe-b09694ae873e.png">
+
+
+
+
+
 
 
 
