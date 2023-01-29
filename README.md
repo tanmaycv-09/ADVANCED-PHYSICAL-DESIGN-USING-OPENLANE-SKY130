@@ -791,6 +791,54 @@ On the second day of the workshop, we started the discussion with the chip floor
                   puts "\[INFO\]: Setting load to: $cap_load"
                   set_load  $cap_load [all_outputs]
 
+- After creating pre_sta.conf & my_base.sdc we will run an sta check :
+
+               sta pre_sta.conf
+- Now we will try to reduce the slack 
+- Delay is function of i/p slew & o/p capacitance 
+- So we will try to reduce the i/p slew & o/p capacitance 
+- Reasons for high i/p slew is high fanout values 
+
+<p align="center"><img width="234" alt="Screenshot 2023-01-29 at 10 47 06 AM" src="https://user-images.githubusercontent.com/77117825/215306581-cae3af14-e618-4b12-8cfa-dc9ad01ca760.png"></p>
+
+- With fanout 4 slack reduces & can be seen
+
+<p align="center"><img width="569" alt="Screenshot 2023-01-29 at 10 48 54 AM" src="https://user-images.githubusercontent.com/77117825/215306634-534fa341-232c-4b0d-8b50-7520cc568da0.png"></p>
+
+- Now if you do 
+            
+           sta pre_sta.conf
+- It will show the new value of slack 
+
+<p align="center"><img width="624" alt="Screenshot 2023-01-29 at 10 51 04 AM" src="https://user-images.githubusercontent.com/77117825/215306849-5e69698f-d39f-4b6a-8029-7bc57c3c0ed5.png"></p>
+
+- In further steps we will try to reduce the slack by upsizing the buffer 
+- As what's happening is slew is being propogated and is being increased, so to reduce it we will now upsize the buffer
+
+<p align="center"><img width="561" alt="Screenshot 2023-01-29 at 10 53 27 AM" src="https://user-images.githubusercontent.com/77117825/215307006-a1f9d953-a830-402e-bf0d-a07044ff1293.png"></p>
+
+<p align="center"><img width="421" alt="Screenshot 2023-01-29 at 10 58 42 AM" src="https://user-images.githubusercontent.com/77117825/215307014-8642e3fd-b688-46ba-9e25-987cb60dc3d4.png"></p>
+
+- Results can be seen after running it & reduced slack is now 
+
+<p align="center"><img width="636" alt="Screenshot 2023-01-29 at 11 01 58 AM" src="https://user-images.githubusercontent.com/77117825/215307095-55777a4e-d600-4104-814e-4ac43f69655f.png"></p>
+
+- More changes we can do 
+
+<p align="center"><img width="480" alt="Screenshot 2023-01-29 at 11 07 04 AM" src="https://user-images.githubusercontent.com/77117825/215307257-5806d3f8-0727-4454-b4b7-5d50d7966f75.png"></p>
+
+- More reduction in slack can be seen 
+
+<p align="center"><img width="617" alt="Screenshot 2023-01-29 at 11 07 38 AM" src="https://user-images.githubusercontent.com/77117825/215307275-1cf5bce0-264d-497a-80b6-509ced33d4b7.png"></p>
+
+
+
+
+
+
+
+
+              
 
 # Part 3 : Clock tree synthesis TritonCTS and signal integrity
 
