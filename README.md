@@ -998,8 +998,8 @@ On the second day of the workshop, we started the discussion with the chip floor
 
 # Acknowledgements
 
-- Kunal Ghosh - Co-founder of VSD(https://www.udemy.com/user/anagha/)
-- Nickson Jose - Workshop Instructor(https://www.udemy.com/user/nickson-jose/)
+- [Kunal Ghosh - Co-founder of VSD](https://www.udemy.com/user/anagha/)
+- [Nickson Jose - Workshop Instructor](https://www.udemy.com/user/nickson-jose/)
 
 # Inquiries
 
