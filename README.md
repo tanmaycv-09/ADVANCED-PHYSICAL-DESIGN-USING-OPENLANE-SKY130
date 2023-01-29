@@ -51,6 +51,41 @@ Physical Design or PnR (Place and Route) is the core of any IC design cycle. Fro
   - [Day 3: Design library cell using Magic Layout and ngspice characterization](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#day-3-design-library-cell-using-magic-layout-and-ngspice-characterization)
    
      - [Lec 0: IO placer revision](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-0-io-placer-revision)
+     - [Lec 1: SPICE deck creation for CMOS inverter](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-1-spice-deck-creation-for-cmos-inverter)
+     - [Lec 2: SPICE simulation lab for CMOS inverter](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-2-spice-simulation-lab-for-cmos-inverter)
+     - [Lec 3-4: Switching Threshold Vm](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-3-4-switching-threshold-vm)
+     - [Lec 5 : Lab steps to git clone vsdstdcelldesign](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-5--lab-steps-to-git-clone-vsdstdcelldesign)
+
+    - [Part 2: Inception of Layout and CMOS fabrication process](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#part-2-inception-of-layout-and-cmos-fabrication-process)
+    
+    - [Part 3: Sky130 Tech File Labs](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#part-3-sky130-tech-file-labs)
+       - [Lec 1 :Lab steps to create final SPICE deck using Sky130 tech](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-1-lab-steps-to-create-final-spice-deck-using-sky130-tech)
+       - [Lec 2:Lab steps to characterize inverter using sky130 model files](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-2lab-steps-to-characterize-inverter-using-sky130-model-files)
+       - [Lec 3-9 : Eplanation and a walk around the magic tool:](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-3-9--eplanation-and-a-walk-around-the-magic-tool)
+ 
+ - [Day 4 : Pre-layout timing analysis and importance of good clock tree](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#day-4--pre-layout-timing-analysis-and-importance-of-good-clock-tree)
+     - [Lec 1 : Lab steps to convert grid info to track info](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-1---lab-steps-to-convert-grid-info-to-track-info)
+     - [Lec 2: Lab steps to convert magic layout to std cell LEF](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-2-lab-steps-to-convert-magic-layout-to-std-cell-lef)
+     - [Lec 3 : Introduction to timing libs and steps to include new cell in synthesis](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-3--introduction-to-timing-libs-and-steps-to-include-new-cell-in-synthesis)
+     - [Lec 4: Introduction to delay tables](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-4-introduction-to-delay-tables)
+     - [Lab : Lab steps to configure synthesis settings to fix slack and include vsdinv](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lab---lab-steps-to-configure-synthesis-settings-to-fix-slack-and-include-vsdinv)
+     
+     
+     - [part 2 : Timing analysis with ideal clocks using openSTA](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#part-2--timing-analysis-with-ideal-clocks-using-opensta)
+        - [Lec 1 : Setup timing analysis and introduction to flip-flop setup time](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-1---setup-timing-analysis-and-introduction-to-flip-flop-setup-time)
+        - [Lab 1 : Lab steps to configure OpenSTA for post-synth timing analysis](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lab-1--lab-steps-to-configure-opensta-for-post-synth-timing-analysis)
+     
+     - [Part 3 : Clock tree synthesis TritonCTS and signal integrity](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#part-3--clock-tree-synthesis-tritoncts-and-signal-integrity)
+        - [Lec 1: Clock tree routing and buffering using H-Tree algorithm](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-1-clock-tree-routing-and-buffering-using-h-tree-algorithm)
+        - [Lec 2 : Crosstalk and clock net shielding](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-2--crosstalk-and-clock-net-shielding)
+      
+- [Day 5 : Final steps for RTL2GDS using tritonRoute and openSTA](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#day-5---final-steps-for-rtl2gds-using-tritonroute-and-opensta)
+ 
+ 
+- [Acknowledgements](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#acknowledgements)
+
+
+- [Inquiries](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#inquiries)
  
   # Day1 Inception of open-source EDA, OpenLANE and Sky130 PDK
   
