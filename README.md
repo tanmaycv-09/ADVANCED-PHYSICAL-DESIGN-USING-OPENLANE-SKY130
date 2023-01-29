@@ -861,10 +861,28 @@ On the second day of the workshop, we started the discussion with the chip floor
 
 <p align="center"><img width="905" alt="Screenshot 2023-01-29 at 10 33 35 AM" src="https://user-images.githubusercontent.com/77117825/215306148-b234fc77-cdaf-4ebf-8744-d716646c4629.png"></p>
 
+- Now its clear to reduce the slack look out for cells with more delay and if they are driving more nets and have large o/p capacitances the issue can be solved by just upsizing the targeted cell
+- replace with large buffers 
+
+<p align="center"><img width="374" alt="Screenshot 2023-01-29 at 11 23 25 AM" src="https://user-images.githubusercontent.com/77117825/215307907-d8f48264-ae1e-4827-b147-d77c206c375b.png"></p>
 
 
+<p align="center"><img width="533" alt="Screenshot 2023-01-29 at 11 26 36 AM" src="https://user-images.githubusercontent.com/77117825/215307952-338ad46e-671e-4257-9518-dfdf5f3f373b.png"></p>
+<p align="center"><img width="518" alt="Screenshot 2023-01-29 at 11 27 04 AM" src="https://user-images.githubusercontent.com/77117825/215307968-77be3ece-7bd6-447a-abd0-8c016c3ef081.png"></p>
 
+- Important point to note here is the modifications which we are doing are outside the openlane and we need to write this verilog file into our picorc32a.synthesis.v file 
+- Type this command 
 
+              write_verilog /home/tanmaycv09/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/26-01_16-45/results/synthesis/picorv32a.synthesis.v
+              
+- After doing above step 
+
+            run_floorplan
+            run_placement
+            
+- After run_placement we noticed the area has increased and this is because of increasing buffer areas for reducing slack             
+              
+              
 
 
 
