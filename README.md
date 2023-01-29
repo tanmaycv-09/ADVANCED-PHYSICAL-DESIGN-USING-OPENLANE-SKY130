@@ -899,6 +899,7 @@ On the second day of the workshop, we started the discussion with the chip floor
 
 - Introduction to Maze Routing Â LeeÂs algorithm
 
+<img width="922" alt="Screenshot 2023-01-29 at 5 41 53 PM" src="https://user-images.githubusercontent.com/77117825/215326566-29da1403-57f0-4ed1-8251-d0f1bf33dc1f.png">
 
 - LeeÂs Algorithm conclusion
 
