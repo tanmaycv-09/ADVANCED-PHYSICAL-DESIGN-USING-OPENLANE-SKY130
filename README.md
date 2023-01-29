@@ -743,6 +743,76 @@ On the second day of the workshop, we started the discussion with the chip floor
 
 <p align="center"><img width="970" alt="Screenshot 2023-01-28 at 4 21 13 PM" src="https://user-images.githubusercontent.com/77117825/215285001-6f05215a-67ee-40b9-918a-6e147ed39724.png"></p>
 
+# Lab 1 : Lab steps to configure OpenSTA for post-synth timing analysis
+
+- We need to create pre_sta.conf file 
+
+          set_cmd_units -time ns -capacitance pF -current mA -voltage V -resistance kOhm -distance um
+          read_liberty -min </location/to/min_lib>
+          read_liberty -max </location/to/max_lib>
+          read_verilog </location/to/verilog_file>
+          link_design <Top-Module-name>
+          read_sdc </location/to/sdc_file>
+          report_checks -path_delay min_max -fields {slew trans net cap input_pin}
+          report_tns
+          report_wns
+
+
+- Now create my_base.sdc file 
+
+                   set ::env(CLOCK_PORT) clk
+                   set ::env(CLOCK_PERIOD) 12.000
+                   set ::env(SYNTH_DRIVING_CELL) sky130_fd_sc_hd__inv_8
+                   set ::env(SYNTH_DRIVING_CELL_PIN) Y
+                   set ::env(SYNTH_CAP_LOAD) 17.65
+                   create_clock [get_ports $::env(CLOCK_PORT)]  -name $::env(CLOCK_PORT)  -period $::env(CLOCK_PERIOD)
+                   set IO_PCT  0.2
+                   set input_delay_value [expr $::env(CLOCK_PERIOD) * $IO_PCT]
+                   set output_delay_value [expr $::env(CLOCK_PERIOD) * $IO_PCT]
+                   puts "\[INFO\]: Setting output delay to: $output_delay_value"
+                   puts "\[INFO\]: Setting input delay to: $input_delay_value"
+                   
+                   
+                  set clk_indx [lsearch [all_inputs] [get_port $::env(CLOCK_PORT)]]
+                  #set rst_indx [lsearch [all_inputs] [get_port resetn]]
+                  set all_inputs_wo_clk [lreplace [all_inputs] $clk_indx $clk_indx]
+                  #set all_inputs_wo_clk_rst [lreplace $all_inputs_wo_clk $rst_indx $rst_indx]
+                  set all_inputs_wo_clk_rst $all_inputs_wo_clk
+                  
+                  
+                  # correct resetn
+                  set_input_delay $input_delay_value  -clock [get_clocks $::env(CLOCK_PORT)] $all_inputs_wo_clk_rst
+                  #set_input_delay 0.0 -clock [get_clocks $::env(CLOCK_PORT)] {resetn}
+                  set_output_delay $output_delay_value  -clock [get_clocks $::env(CLOCK_PORT)] [all_outputs]
+                  
+                  # TODO set this as parameter
+                  set_driving_cell -lib_cell $::env(SYNTH_DRIVING_CELL) -pin $::env(SYNTH_DRIVING_CELL_PIN) [all_inputs]
+                  set cap_load [expr $::env(SYNTH_CAP_LOAD) / 1000.0]
+                  puts "\[INFO\]: Setting load to: $cap_load"
+                  set_load  $cap_load [all_outputs]
+
+
+# Part 3 : Clock tree synthesis TritonCTS and signal integrity
+
+# Lec 1: Clock tree routing and buffering using H-Tree algorithm
+
+- There is problem of skew which arises while transfer of clock to flip flops
+
+<p align="center"><img width="980" alt="Screenshot 2023-01-29 at 10 21 48 AM" src="https://user-images.githubusercontent.com/77117825/215305795-a53bf96e-b0f4-4374-acd8-66c75d16e52a.png"></p>
+
+- To avoid we need to use repeaters 
+
+<p align="center"><img width="978" alt="Screenshot 2023-01-29 at 10 25 20 AM" src="https://user-images.githubusercontent.com/77117825/215305855-f5d7cd27-4830-454b-9992-e5c0150b4187.png"></p>
+
+# Lec 2 : Crosstalk and clock net shielding
+- Glitch explanation 
+
+<p align="center"><img width="753" alt="Screenshot 2023-01-29 at 10 31 29 AM" src="https://user-images.githubusercontent.com/77117825/215306122-8375191e-830c-412a-b88a-58df6b15bbb4.png"></p>
+
+- Crosstalk creates skew and this can add up in a multi-million chip 
+
+<p align="center"><img width="905" alt="Screenshot 2023-01-29 at 10 33 35 AM" src="https://user-images.githubusercontent.com/77117825/215306148-b234fc77-cdaf-4ebf-8744-d716646c4629.png"></p>
+
 
 
 
