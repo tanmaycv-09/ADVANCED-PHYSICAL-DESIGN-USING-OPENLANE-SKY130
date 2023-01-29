@@ -14,6 +14,43 @@ Physical Design or PnR (Place and Route) is the core of any IC design cycle. Fro
     - [Part 1: How to talk to computers](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#part-1-how-to-talk-to-computers)
           
         - [Lec 1 : Introduction to QFN-48 Package, chip, pads, core, die and IPs](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-1--introduction-to-qfn-48-package-chip-pads-core-die-and-ips)
+        - [Lec 2 : Introduction to RISC-V](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-2--introduction-to-risc-v)
+     
+     - [Part 2: SoC design and OpenLANE](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#part-2-soc-design-and-openlane)
+       
+        - [Lec 1: Introduction to all components of open-source digital asic design](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-1-introduction-to-all-components-of-open-source-digital-asic-design)
+        - [Lec 2: Simplified RTL2GDS flow](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-2-simplified-rtl2gds-flow)
+        - [Lec 4: Introduction to OpenLANE detailed ASIC design flow](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-4-introduction-to-openlane-detailed-asic-design-flow)
+       
+      - [Part 3: Get familiar to open-source EDA tools](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#part-3-get-familiar-to-open-source-eda-tools)
+     
+  - [Day 2: Good floorplan vs bad floorplan and introduction to library cells](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#day-2-good-floorplan-vs-bad-floorplan-and-introduction-to-library-cells)
+   
+      - [Part 1: Chip Floor planning considerations](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#part-1-chip-floor-planning-considerations)
+       
+         - [Lec 1 : Utilization factor and aspect ratio](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-1--utilization-factor-and-aspect-ratio)
+         - [Lec 2: Concept of pre-placed cells](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-2-concept-of-pre-placed-cells)
+         - [Lec 3: De-coupling capacitors](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-3-de-coupling-capacitors)
+         - [Lec 4: Power planning](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-4-power-planning)
+         - [Lec 5: Pin placement and logical cell placement blockage](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-5-pin-placement-and-logical-cell-placement-blockage)
+         - [Lec 6: Steps to run floorplan using OpenLANE](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-6-steps-to-run-floorplan-using-openlane)
+         - [Lec 7: Review floorplan files and steps to view floorplan](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-7-review-floorplan-files-and-steps-to-view-floorplan)
+         - [Lec 8: Review floorplan layout in Magic](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-8-review-floorplan-layout-in-magic)
+       
+       - [Part 2: Library Binding and Placement](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#part-2-library-binding-and-placement)
+       
+         - [Lec 1: Netlist binding and initial place design](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-1-netlist-binding-and-initial-place-design)
+         - [Lec 2: Optimize placement using estimated wire-length and capacitance](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-2-optimize-placement-using-estimated-wire-length-and-capacitance)
+         - [Lec 3: Final placement optimization](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-3-final-placement-optimization)
+         - [Lec 4: Need for libraries and characterization](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-4-need-for-libraries-and-characterization)
+         - [Lec 5: Congestion aware placement using RePlAce](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-5-congestion-aware-placement-using-replace)
+        
+       - [Part 3: Cell design and characterization flows](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#part-3-cell-design-and-characterization-flows)
+       - [Part 4: General timing characterization parameters](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#part-4-general-timing-characterization-parameters)
+      
+  - [Day 3: Design library cell using Magic Layout and ngspice characterization](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#day-3-design-library-cell-using-magic-layout-and-ngspice-characterization)
+   
+     - [Lec 0: IO placer revision](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#lec-0-io-placer-revision)
  
   # Day1 Inception of open-source EDA, OpenLANE and Sky130 PDK
   
