@@ -894,12 +894,18 @@ On the second day of the workshop, we started the discussion with the chip floor
             
 <p align="center"><img width="707" alt="Screenshot 2023-01-29 at 1 48 58 PM" src="https://user-images.githubusercontent.com/77117825/215314240-031e783b-75e5-4618-aaba-5692f008e480.png"></p>
 
-# Part 4: Timing analysis with real clocks using openSTA
 
-# Lec 1 : Setup timing analysis using real clocks
-- Setup Time Defn :
+# Day 5 :  Final steps for RTL2GDS using tritonRoute and openSTA
 
-<img width="987" alt="Screenshot 2023-01-29 at 1 58 29 PM" src="https://user-images.githubusercontent.com/77117825/215315803-79f0fa6c-f3ec-46ec-95fe-b09694ae873e.png">
+- Introduction to Maze Routing Â LeeÂs algorithm
+
+
+- LeeÂs Algorithm conclusion
+
+
+
+
+
 
 
 
