@@ -9,6 +9,8 @@ Physical Design or PnR (Place and Route) is the core of any IC design cycle. Fro
 
  # Table of Contents 
  
+ - [Day1 Inception of open-source EDA, OpenLANE and Sky130 PDK](https://github.com/tanmaycv-09/ADVANCED-PHYSICAL-DESIGN-USING-OPENLANE-SKY130/blob/main/README.md#day1-inception-of-open-source-eda-openlane-and-sky130-pdk)
+ 
  
  
   # Day1 Inception of open-source EDA, OpenLANE and Sky130 PDK
