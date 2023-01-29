@@ -899,9 +899,37 @@ On the second day of the workshop, we started the discussion with the chip floor
 
 - Introduction to Maze Routing Â LeeÂs algorithm
 
-<img width="922" alt="Screenshot 2023-01-29 at 5 41 53 PM" src="https://user-images.githubusercontent.com/77117825/215326566-29da1403-57f0-4ed1-8251-d0f1bf33dc1f.png">
+<p align="center"><img width="922" alt="Screenshot 2023-01-29 at 5 41 53 PM" src="https://user-images.githubusercontent.com/77117825/215326566-29da1403-57f0-4ed1-8251-d0f1bf33dc1f.png"></p>
 
-- LeeÂs Algorithm conclusion
+- a look into triton_route
+
+<p align="center"><img width="844" alt="Screenshot 2023-01-29 at 8 10 36 PM" src="https://user-images.githubusercontent.com/77117825/215335270-df7413d2-3283-4231-a4b4-dc70e09b2048.png"></p>
+
+
+- power trailing 
+
+<p align="center"><img width="585" alt="Screenshot 2023-01-29 at 7 59 19 PM" src="https://user-images.githubusercontent.com/77117825/215335317-91fca568-4635-4ac9-bc66-3ad95de9f8ac.png"></p>
+
+
+- final steps are to 
+
+
+     run_routing 
+
+
+<p align="center"><img width="477" alt="Screenshot 2023-01-29 at 6 55 06 PM" src="https://user-images.githubusercontent.com/77117825/215335345-642feba2-9e75-494e-82d7-49d9930123bd.png"></p>
+
+
+# Acknowledgements
+
+- Kunal Ghosh - Co-founder of VSD(https://www.udemy.com/user/anagha/)
+- Nickson Jose - Workshop Instructor(https://www.udemy.com/user/nickson-jose/)
+
+# Inquiries
+
+Connect with me at my linkedin: (https://www.linkedin.com/in/tanmay-chakravorty-61a2411b7/)
+
+     
 
 
 
